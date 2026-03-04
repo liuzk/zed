@@ -1,0 +1,149 @@
+[
+  // Eclipse-style key bindings for Linux/Windows
+  {
+    "bindings": {
+      // Navigation
+      "ctrl-3": "command_palette::Toggle", // Quick Access
+      "ctrl-shift-r": "file_finder::Toggle", // Open Resource
+      "ctrl-shift-t": "project_symbols::Toggle", // Open Type
+      "ctrl-e": "tab_switcher::Toggle", // Quick Switch Editor
+      "ctrl-pageup": "pane::ActivatePreviousItem", // Previous Editor
+      "ctrl-pagedown": "pane::ActivateNextItem", // Next Editor
+      "ctrl-shift-f6": "pane::ActivatePreviousItem", // Previous Editor (alternative)
+      "ctrl-f6": "pane::ActivateNextItem", // Next Editor (alternative)
+      "ctrl-m": "workspace::ToggleZoom", // Maximize/Restore Active View
+      "ctrl-{": "pane::ActivatePreviousItem",
+      "ctrl-}": "pane::ActivateNextItem",
+
+      // Editor navigation
+      "ctrl-l": "go_to_line::Toggle", // Go to Line
+      "ctrl-o": "outline::Toggle", // Quick Outline
+      "ctrl-t": "outline::Toggle", // Quick Type Hierarchy (similar to Quick Outline)
+      "f4": "outline::Toggle", // Open Type Hierarchy (similar)
+      "ctrl-f3": "outline::Toggle", // Open Structure (similar)
+      "ctrl-alt-h": "editor::FindAllReferences", // Open Call Hierarchy (similar)
+
+      // Search
+      "ctrl-shift-u": "pane::DeploySearch", // Find occurrences in file
+      "ctrl-shift-g": "editor::FindAllReferences", // References in workspace
+      "ctrl-k": "search::SelectNextMatch", // Find Next
+      "ctrl-shift-k": "search::SelectPreviousMatch", // Find Previous
+      "ctrl-j": "search::SelectNextMatch", // Incremental Find Next
+      "ctrl-shift-j": "search::SelectPreviousMatch", // Incremental Find Previous
+
+      // Editing
+      "ctrl-d": "editor::DeleteLine", // Delete Line
+      "ctrl-alt-down": "editor::DuplicateLineDown", // Duplicate Lines
+      "ctrl-alt-up": "editor::DuplicateLineUp", // Duplicate Lines (up)
+      "alt-down": "editor::MoveLineDown", // Move Lines Down
+      "alt-up": "editor::MoveLineUp", // Move Lines Up
+      "ctrl-delete": ["editor::DeleteToNextWordEnd", { "ignore_newlines": true }], // Delete Next Word
+      "ctrl-backspace": ["editor::DeleteToPreviousWordStart", { "ignore_newlines": true }], // Delete Previous Word
+      "ctrl-shift-x": "editor::ToggleCase", // To Upper Case / To Lower Case (toggle)
+      "ctrl-shift-y": "editor::ToggleCase", // Alternative toggle case
+
+      // Code manipulation
+      "ctrl-shift-f": "editor::Format", // Format
+      "ctrl-shift-o": "editor::OrganizeImports", // Organize Imports
+      "ctrl-/": ["editor::ToggleComments", { "advance_downwards": true }], // Toggle Comment
+      "ctrl-7": ["editor::ToggleComments", { "advance_downwards": true }], // Toggle Comment (alternative)
+      "ctrl-1": "editor::ToggleCodeActions", // Quick Fix
+      "ctrl-space": "editor::ShowCompletions", // Content Assist
+      "ctrl-shift-space": "editor::ShowSignatureHelp", // Parameter Hints
+
+      // Refactoring
+      "alt-shift-r": "editor::Rename", // Rename
+      "alt-shift-t": "command_palette::Toggle", // Refactor menu (similar)
+
+      // Debug
+      "f11": "debugger::Start", // Run
+      "ctrl-f11": "debugger::RerunSession", // Run Last Launched
+      "f8": "debugger::StepOver", // Step Over
+      "f5": "debugger::StepInto", // Step Into
+      "f6": "debugger::StepOut", // Step Return
+      "f7": "debugger::Continue", // Resume
+      "ctrl-shift-b": "editor::ToggleBreakpoint", // Toggle Breakpoint
+      "ctrl-f2": "debugger::Stop", // Terminate
+
+      // Navigation history
+      "alt-left": "pane::GoBack", // Backward History
+      "alt-right": "pane::GoForward", // Forward History
+      "ctrl-q": "editor::GoToDefinition", // Last Edit Location (similar)
+
+      // Views and panels
+      "ctrl-shift-b": "project_panel::ToggleFocus", // Build Project (mapped to toggle project panel)
+      "alt-shift-q p": "project_panel::ToggleFocus", // Show View: Package Explorer
+      "alt-shift-q c": "outline_panel::ToggleFocus", // Show View: Outline
+      "alt-shift-q o": "outline_panel::ToggleFocus", // Show View: Outline (alternative)
+      "alt-shift-q t": "terminal_panel::Toggle", // Show View: Terminal
+      "alt-shift-q s": "project_panel::ToggleFocus", // Show View: Project Explorer
+
+      // Files
+      "ctrl-n": "workspace::NewFile", // New
+      "ctrl-shift-n": "workspace::NewWindow", // New Window
+      "ctrl-s": "workspace::Save", // Save
+      "ctrl-shift-s": "workspace::SaveAs", // Save As
+      "ctrl-w": "pane::CloseActiveItem", // Close
+      "ctrl-shift-w": "workspace::CloseWindow", // Close All
+      "f5": "workspace::Refresh", // Refresh (F5 is commonly used)
+
+      // Misc
+      "ctrl-p": "file_finder::Toggle", // Print (overridden to file finder)
+      "ctrl-f": "buffer_search::Deploy", // Find
+      "ctrl-h": "buffer_search::DeployReplace", // Replace
+      "ctrl-x": "editor::Cut", // Cut
+      "ctrl-c": "editor::Copy", // Copy
+      "ctrl-v": "editor::Paste", // Paste
+      "ctrl-z": "editor::Undo", // Undo
+      "ctrl-y": "editor::Redo", // Redo
+      "ctrl-a": "editor::SelectAll", // Select All
+      "ctrl-,": "zed::OpenSettings", // Preferences
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      // Go to definition
+      "f3": "editor::GoToDefinition", // Open Declaration
+      "ctrl-click": "editor::GoToDefinition", // Open Declaration (Ctrl+Click)
+
+      // Selection
+      "ctrl-shift-left": "editor::SelectToPreviousWordStart",
+      "ctrl-shift-right": "editor::SelectToNextWordEnd",
+      "shift-home": "editor::SelectToBeginningOfLine",
+      "shift-end": "editor::SelectToEndOfLine",
+      "ctrl-shift-home": "editor::SelectToBeginning",
+      "ctrl-shift-end": "editor::SelectToEnd",
+    },
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "ctrl-enter": "editor::NewlineBelow", // Insert Line Below
+      "ctrl-shift-enter": "editor::NewlineAbove", // Insert Line Above
+    },
+  },
+  {
+    "context": "BufferSearchBar",
+    "bindings": {
+      "escape": "buffer_search::Dismiss",
+      "enter": "search::SelectNextMatch",
+      "shift-enter": "search::SelectPreviousMatch",
+    },
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-pageup": "pane::ActivatePreviousItem",
+      "ctrl-pagedown": "pane::ActivateNextItem",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      // Build-like commands
+      "ctrl-b": "workspace::Save", // Build (mapped to Save in Zed context)
+      "ctrl-shift-b": "workspace::SaveAll", // Build All (mapped to Save All)
+    },
+  },
+]
